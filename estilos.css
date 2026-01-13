@@ -1,0 +1,127 @@
+:root {
+    --color-primario: #131e72;
+    --color-secundario: #0a8037;
+    --color-fondo: #fdfdfd;
+    --danger: #ff0000;
+    --gold: #ffd700;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-fondo);
+    font-family: serif, sans-serif,'Times New Roman', Times;
+    margin: 10px 10px 10px 10px;
+}   
+
+p {
+    font-size: 30px;
+    text-align: justify;
+}
+h2 {
+    text-align: center;
+    font-size: 250%;
+    color: var(--color-primario);
+    margin-bottom: 20px;
+}
+
+.cabecera {
+    background-color: var(--color-primario);
+    color: white;
+    text-align: flex-start;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 200%;
+}
+.logo_cabecera {
+    display: flex;
+}
+.menu_navegacion {
+    background-color: #fdfdfd;
+    font-size: 30px;
+    padding: 10px 0
+}
+.menu_navegacion nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.menu_navegacion a {
+    text-decoration: none;
+    color: var(--color-primario);
+    font-weight: bold;
+    transition: 0.3s;
+}
+.menu_navegacion a:hover {
+    background-color: var(--color-primario);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;            
+}
+.contenido_inicio {
+    color: rgb(7, 7, 7);
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+}
+.imagen_inicio {
+    width: 100vw;
+    height: auto;
+    justify-content: right;
+    align-items: right;
+}
+.texto_inicio {
+    display: flexbox;
+    justify-content: left;
+    align-items: left;
+    text-indent: 30px;
+}
+
+
+.pie_pagina {
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 200%;
+}
+
+@media (max-width:1000px) {
+    .contenido_inicio {
+        flex-direction: column; /* ¡Aquí ocurre la magia! Se ponen uno arriba del otro */
+    }
+
+    .imagen_inicio img {
+        width: 100%;     /* La imagen ocupa todo el ancho en el celular */
+    }
+
+    .texto_inicio {
+        width: 90%;     /* El texto también ocupa todo el ancho abajo */
+        text-align: center; /* Opcional: centra el texto para que se vea mejor en móvil */
+    }
+    .cabecera {
+        text-align: center;
+        gap: 10px;
+    }
+    .titulo_cabecera {
+        font-size: 3vw;
+    }
+    .logo_cabecera {
+        width: 50%;
+        height: auto;
+    }
+    .menu_navegacion {
+        font-size: 3vw;
+    }
+    p {
+        font-size: 4vw;
+    }
+    .pie_pagina {
+        font-size: 3vw;
+    }
+}
+
+
